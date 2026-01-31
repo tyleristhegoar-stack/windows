@@ -4,8 +4,8 @@ services:
     image: ghcr.io/dockur/windows
     environment:
       RAM_SIZE: "half"
-      DISK_SIZE: "max"
-      CPU_CORES: "max"
+      DISK_SIZE: "1TB"
+      CPU_CORES: "5"
     devices:
       - /dev/kvm
       - /dev/net/tun
