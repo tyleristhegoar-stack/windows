@@ -5,7 +5,7 @@ services:
     environment:
       VERSION: "11"
       DISK_SIZE: "509G"
-      MANUEL: "Y"
+      MANUAL: "Y
     devices:
       - /dev/kvm
       - /dev/net/tun
