@@ -1,7 +1,7 @@
 services:
   windows:
     build: .
-    container_name: windows-gpu
+    container_name: windows 
     devices:
       - /dev/kvm
       - /dev/dri:/dev/dri
