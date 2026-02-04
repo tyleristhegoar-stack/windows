@@ -1,0 +1,17 @@
+services:
+  windows:
+    build: .
+    container_name: windows-gpu
+    devices:
+      - /dev/kvm
+      - /dev/dri:/dev/dri
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - GPU: "yes"
+      - VGA: "virtio"
+    ports:
+      - 8006:8006
+    volumes:
+      - ./storage:/storage
+    restart: on-failure
