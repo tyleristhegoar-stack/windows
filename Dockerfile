@@ -29,6 +29,8 @@ COPY --chmod=755 ./assets /run/assets
 
 ADD --chmod=664 https://github.com/qemus/virtiso-whql/releases/download/v1.9.49-0/virtio-win-1.9.49.tar.xz /var/drivers.txz
 
+# ... (rest of the file stays the same until the bottom)
+
 FROM dockurr/windows-arm:${VERSION_ARG} AS build-arm64
 FROM build-${TARGETARCH}
 
@@ -38,17 +40,16 @@ RUN echo "$VERSION_ARG" > /run/version
 VOLUME /storage
 EXPOSE 3389 8006
 
-# ... (existing ENV variables)
+ENV VERSION="11"
+ENV RAM_SIZE="65G"
+ENV CPU_CORES="4"
 ENV DISK_SIZE="655G"
 
-# --- ADD THESE LINES FOR VGA / GPU ---
+# --- ADDED vGPU / VGA CONFIGURATION ---
 ENV VGA="virtio"
-ENV DISPLAY="web"
 ENV VIDEO="yes"
+ENV DISPLAY="web"
 ENV GPU="yes"
-# -------------------------------------
-
-ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
-
+# --------------------------------------
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
