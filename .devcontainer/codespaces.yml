@@ -6,6 +6,7 @@ services:
       RAM_SIZE: "MAX"
       DISK_SIZE: "1TB"
       CPU_CORES: "5"
+      GPU: "y"
     devices:
       - /dev/kvm
       - /dev/net/tun
