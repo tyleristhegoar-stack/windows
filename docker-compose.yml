@@ -1,6 +1,6 @@
 services:
   windows:
-    image:
+    image: "dockurr/windows"
     container_name: windows 
     devices:
       - /dev/kvm
