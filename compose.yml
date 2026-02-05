@@ -6,19 +6,20 @@ services:
       VERSION: "11"
       DISK_SIZE: "700G"
       MANUAL: "Y"
-      RAM_SIZE: "30G"h
+      RAM_SIZE: "30G"
       MEMORY: "820098MB
-   devices:
+     devices:
       - /dev/kvm
       - /dev/net/tun
-      
-   cap_add:
-      - NET_ADMIN
-    ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
+     cap_add:
+        - NET_ADMIN
+      ports:
+        - 8006:8006
+        - 3389:3389/tcp
+        - 3389:3389/udp
     volumes:
       - ./windows:/storage
     restart: always
     stop_grace_period: 2m
+
+   
