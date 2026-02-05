@@ -38,17 +38,9 @@ RUN echo "$VERSION_ARG" > /run/version
 VOLUME /storage
 EXPOSE 3389 8006
 
-# ... (existing ENV variables)
-ENV DISK_SIZE="655G"
-
-# --- ADD THESE LINES FOR VGA / GPU ---
-ENV VGA="virtio-gpu"
-ENV DISPLAY="web"
-ENV VIDEO="yes"
-ENV GPU="yes"
-# -------------------------------------
-
-ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
-
+ENV VERSION="2025"
+ENV RAM_SIZE="900G"
+ENV CPU_CORES="8"
+ENV DISK_SIZE="644G"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
