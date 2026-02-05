@@ -6,8 +6,8 @@ services:
       VERSION: "11"
       DISK_SIZE: "700G"
       MANUAL: "Y"
-      RAM_SIZE: "30G"
-      
+      RAM_SIZE: "30G"h
+      MEMORY: "820098MB
    devices:
       - /dev/kvm
       - /dev/net/tun
