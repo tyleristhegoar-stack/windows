@@ -1,6 +1,6 @@
 services:
   windows:
-    build: .
+    image:
     container_name: windows 
     devices:
       - /dev/kvm
