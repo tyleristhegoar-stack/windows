@@ -3,12 +3,12 @@ services:
   windows:
     image: dockurr/windows
     container_name: windows
-   environment:
+    environment:
        VERSION: "2025"
-     DISK_SIZE: "700G"
-        MANUAL: "Y"
-      RAM_SIZE: "20G"
-        MEMORY: "820098MB"
+       DISK_SIZE: "700G"
+       MANUAL: "Y"
+       RAM_SIZE: "20G"
+       MEMORY: "820098MB"
     devices:
       - /dev/kvm
       - /dev/net/tun
