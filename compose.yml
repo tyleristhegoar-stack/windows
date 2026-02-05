@@ -6,13 +6,13 @@ services:
       VERSION: "11"
       DISK_SIZE: "700G"
       MANUAL: "Y"
-      RAM_SIZE: "20G"
-      VGA: "virtio-gpu-gl-pci"
-    devices:
+      RAM_SIZE: "30G"
+      
+   devices:
       - /dev/kvm
       - /dev/net/tun
-      - /dev/dri:/dev/dri
-    cap_add:
+      
+   cap_add:
       - NET_ADMIN
     ports:
       - 8006:8006
