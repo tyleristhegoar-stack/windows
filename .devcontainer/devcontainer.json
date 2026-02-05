@@ -1,8 +1,8 @@
 {
-  "name": "Windows 2025",
+  "name": "Windows 11 Pro",
   "service": "windows",
   "containerEnv": {
-    "VERSION": "2025"
+    "VERSION": "11"
   },
   "forwardPorts": [8006],
   "portsAttributes": {
