@@ -1,13 +1,14 @@
 services:
   windows:
-    image: dockurr/windows
-    container_name: windows
+     image: dockurr/windows
+ container_name: windows
     environment:
-      VERSION: "11"
+        VERSION: "11"
       DISK_SIZE: "700G"
-      MANUAL: "Y"
-      RAM_SIZE: "30G"
-      MEMORY: "820098MB
+         MANUAL: "Y"
+       RAM_SIZE: "30G"
+         MEMORY: "820098MB
+  
      devices:
       - /dev/kvm
       - /dev/net/tun
