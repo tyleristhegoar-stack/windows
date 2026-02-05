@@ -42,7 +42,7 @@ EXPOSE 3389 8006
 ENV DISK_SIZE="655G"
 
 # --- ADD THESE LINES FOR VGA / GPU ---
-ENV VGA="virtio"
+ENV VGA="virtio-gpu"
 ENV DISPLAY="web"
 ENV VIDEO="yes"
 ENV GPU="yes"
