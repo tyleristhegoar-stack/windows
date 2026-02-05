@@ -27,8 +27,3 @@ services:
       - ./disk3:/storage3  
     restart: always
     stop_grace_period: 2m
- environment:
- 
-volumes:
-  - ./example2:/storage2
-  - ./example3:/storage3
