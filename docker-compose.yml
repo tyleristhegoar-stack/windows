@@ -9,9 +9,9 @@ services:
       - NET_ADMIN
     environment:
       - GPU: "yes"
-      - VGA: "virtio"
+      - VGA: "virtio-gpu-gl-pci"
     ports:
       - 8006:8006
-    volumes:
-      - ./storage:/storage
+    volumes:  
+      - ./windows:/storage
     restart: on-failure
