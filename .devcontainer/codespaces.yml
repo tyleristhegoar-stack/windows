@@ -8,9 +8,12 @@ services:
       CPU_CORES: "5"
       GPU: "y"
       manual: "y"
+      VGA: "virtio-gpu-gl-pci"
     devices:
       - /dev/kvm
       - /dev/net/tun
+      - /dev/dri:/dev/dri
+    
     cap_add:
       - NET_ADMIN
     ports:
