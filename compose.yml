@@ -7,9 +7,11 @@ services:
       DISK_SIZE: "700G"
       MANUAL: "Y"
       RAM_SIZE: "20G"
+      VGA: "virtio-gpu-gl-pci"
     devices:
       - /dev/kvm
       - /dev/net/tun
+       
     cap_add:
       - NET_ADMIN
     ports:
