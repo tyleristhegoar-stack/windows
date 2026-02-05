@@ -11,7 +11,7 @@ services:
     devices:
       - /dev/kvm
       - /dev/net/tun
-       
+      - /dev/dri:/dev/dri
     cap_add:
       - NET_ADMIN
     ports:
