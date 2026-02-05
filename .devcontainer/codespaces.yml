@@ -3,18 +3,14 @@ services:
     container_name: windows
     image: ghcr.io/dockur/windows
     environment:
-      RAM_SIZE: "MAX"
+      RAM_SIZE: "120G"
       DISK_SIZE: "1TB"
       CPU_CORES: "5"
-      GPU: "y"
-      manual: "y"
-      VGA: "virtio-gpu-gl-pci"
-    devices:
+     
+  devices:
       - /dev/kvm
       - /dev/net/tun
-      - /dev/dri:/dev/dri
-    
-    cap_add:
+  cap_add:
       - NET_ADMIN
     ports:
       - 8006:8006
