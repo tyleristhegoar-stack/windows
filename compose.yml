@@ -3,10 +3,16 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "2025"
+      ARGUMENTS: "-device usb-host,vendorid=0x1234,productid=0x1234"
+      DISK2_SIZE: "132G"  
+      DISK3_SIZE: "164G"
+      VGA: "virtio-gpu-gl-pc"
+      DISK_SIZE: "1200G
     devices:
       - /dev/kvm
       - /dev/net/tun
+      - /dev/bus/usb
     cap_add:
       - NET_ADMIN
     ports:
@@ -15,5 +21,8 @@ services:
       - 3389:3389/udp
     volumes:
       - ./windows:/storage
+      - ./disk2:/storage2 
+      - ./disk3:/storage3
     restart: always
     stop_grace_period: 2m
+  
