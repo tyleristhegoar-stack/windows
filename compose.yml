@@ -5,7 +5,7 @@ services:
     environment:
       VERSION: "11"
       RAM_SIZE: "24G"
-      DISK_SIZE: "50G"
+      DISK_SIZE: "350G"
       DISK2_SIZE: "120G"
       CPU_CORES: "20"
       VGA: "virtio-gpu"
